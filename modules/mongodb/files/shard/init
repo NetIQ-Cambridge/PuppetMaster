@@ -105,6 +105,7 @@ case "$1" in
 			${mongodb_BIN} \
 			--quiet \
 			--pidfilepath ${mongodb_PIDFILE} \
+			--shardsvr \
 			 -f "$mongodb_CONFIG"
 
 	# Remember status and be verbose

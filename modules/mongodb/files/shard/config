@@ -21,7 +21,7 @@ dbpath = /var/lib/mongodb/db
 
 # Turn on/off security.  Off is currently the default
 #noauth = true
-auth = true
+#auth = true
 
 # Full filename path to where log messages will be written.
 logpath = /var/log/mongodb/mongodb.log
