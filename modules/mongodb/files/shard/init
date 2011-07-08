@@ -154,7 +154,7 @@ case "$1" in
 
 	echo -n "Reload service mongodb "
 	## if it supports it:
-	/sbin/killproc -HUP ${mongodb_BIN}
+	/sbin/killproc -HUP ${mongodb_BIN} -p ${mongodb_PIDFILE}
 	#touch /var/run/mongodb.pid
 	rc_status -v
 
@@ -168,7 +168,7 @@ case "$1" in
 
 	# If it supports signaling:
 	echo -n "Reload service mongodb "
-	/sbin/killproc -HUP ${mongodb_BIN}
+	/sbin/killproc -HUP ${mongodb_BIN} -p ${mongodb_PIDFILE}
 	#touch /var/run/mongodb.pid
 	rc_status -v
 	
@@ -190,7 +190,7 @@ case "$1" in
 	# 5--199 reserved (5--99 LSB, 100--149 distro, 150--199 appl.)
 	
 	# NOTE: checkproc returns LSB compliant status values.
-	/sbin/checkproc ${mongodb_BIN}
+	/sbin/checkproc ${mongodb_BIN} -p ${mongodb_PIDFILE}
 	# NOTE: rc_status knows that we called this init script with
 	# "status" option and adapts its messages accordingly.
 	rc_status -v

@@ -85,7 +85,7 @@ case "$1" in
 	## Start daemon with startproc(8). If this fails
 	## the return value is set appropriately by startproc.
 	/sbin/startproc -u mongodb -g mongodb ${BIN} \
-		--configdb 164.99.129.33:27016 \
+		--configdb ip-10-176-30-36.us-west-1.compute.internal:27016 \
 		--logpath /var/log/mongodb/router.log \
 		--logappend \
 		--fork
