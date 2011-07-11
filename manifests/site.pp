@@ -1,5 +1,6 @@
 class base {
-        include mongodb::shard
+        include puppet
+	include mongodb::shard
         include mongodb::router
 }
 
