@@ -11,6 +11,6 @@ node default {
 	include base
 }
 
-node 'ip-10-176-30-36.us-west-1.compute.internal' {
+node 'ip-10-160-35-59.us-west-1.compute.internal' {
         include super
 }
