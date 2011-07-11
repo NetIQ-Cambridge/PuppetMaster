@@ -8,6 +8,6 @@ class mongodb::shard inherits mongodb::package {
                 mode => 644
         }
         service { "mongodb": ensure => running,
-                 require => [Package["mongodb"], File["/etc/mongodb.conf"], File["/etc/init.d/mongodb"]] }
+                 subscribe => [Package["mongodb"], File["/etc/mongodb.conf"], File["/etc/init.d/mongodb"]] }
 
 }

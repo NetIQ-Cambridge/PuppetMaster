@@ -7,5 +7,5 @@ class mongodb::configsvr inherits mongodb::package {
                 source => "puppet:///mongodb/configsvr/config",
                 mode => 644
         }
-        service { "mongodb-configsvr": ensure => running, require => [Package["mongodb"], File["/etc/init.d/mongodb-configsvr"], File["/etc/mongodb-configsvr.conf"]] }
+        service { "mongodb-configsvr": ensure => running, subscribe => [Package["mongodb"], File["/etc/init.d/mongodb-configsvr"], File["/etc/mongodb-configsvr.conf"]] }
 }

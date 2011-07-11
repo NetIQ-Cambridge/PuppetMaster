@@ -4,5 +4,5 @@ class mongodb::router inherits mongodb::package {
                 mode => 755
         }
         service { "mongos": ensure => running,
-		  require => [Package["mongodb"], File["/etc/init.d/mongos"]] }
+		  subscribe => [Package["mongodb"], File["/etc/init.d/mongos"]] }
 }
